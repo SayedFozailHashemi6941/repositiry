@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sayed Fozail Hashemi — Software Engineer crafting fast, elegant web experiences." />
+  <meta name="theme-color" content="#0d0b14" />
+  <title>Sayed Fozail Hashemi — Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="#top" class="brand" aria-label="Home">
+        <span class="brand__mark">&lt;•••&gt;</span>
+        <span class="brand__text">DEVFOLIO</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#work" class="nav__link">Projects</a>
+        <a href="#work" class="nav__link">Resume</a>
+        <a href="#work" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="icon-btn theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="material-symbols-outlined theme-toggle__dark" aria-hidden="true">dark_mode</span>
+          <span class="material-symbols-outlined theme-toggle__light" aria-hidden="true">light_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Software Engineer</p>
+          <h1 class="hero__title">
+            Sayed Fozail<span class="grad">Hashemi</span>
+          </h1>
+          <p class="hero__lead">
+            I design and build fast, accessible, and delightfully animated web experiences.
+            Currently shipping products at TechGulf Solutions.
+          </p>
+
+          <div class="hero__meta">
+            <a class="meta-item" href="mailto:khalid@techgulf.com">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              <span>sayedfozailhashemi@gmail.com</span>
+            </a>
+            <a class="meta-item" href="tel:+213908539206">
+              <span class="material-symbols-outlined" aria-hidden="true">call</span>
+              <span>+93 792167191</span>
+            </a>
+          </div>
+
+          <div class="hero__cta">
+            <a href="#work" class="btn btn--primary">
+              <span>View my work</span>
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </a>
+            <a href="#work" class="btn btn--ghost">Hire me</a>
+          </div>
+        </div>
+
+        <!-- About card -->
+        <aside class="about-card glass" aria-label="About">
+          <div class="about-card__avatar">
+            <!-- If images/avatar.jpg exists it shows; otherwise the initials fallback shows -->
+            <img src="images/IMG_1954.JPG" alt="Portrait of Ahmed Khalid"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="about-card__fallback" style="display:none;">AK</div>
+          </div>
+
+          <div class="about-card__head">
+            <h2>About</h2>
+            <span class="chip chip--dot">Available for work</span>
+          </div>
+          <p class="about-card__text">
+            A passionate software engineer with a strong background in Computer Science.
+          </p>
+          <ul class="about-card__list">
+            <li>
+              <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+              <span>Herat, Afghanistan</span>
+            </li>
+            <li>
+              <span class="material-symbols-outlined" aria-hidden="true">work</span>
+              <span>Jami University</span>
+            </li>
+            
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- WORK / TABS -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="tabs" role="tablist" aria-label="Sections">
+          <button class="tab is-active" role="tab" aria-selected="true"  aria-controls="panel-projects" id="tab-projects" data-tab="projects">Projects</button>
+          <button class="tab"           role="tab" aria-selected="false" aria-controls="panel-resume"   id="tab-resume"   data-tab="resume" tabindex="-1">Resume</button>
+          <button class="tab"           role="tab" aria-selected="false" aria-controls="panel-contact"  id="tab-contact"  data-tab="contact" tabindex="-1">Contact</button>
+          <span class="tabs__indicator" aria-hidden="true"></span>
+        </div>
+
+        <!-- PROJECTS (empty state shown by default) -->
+        <div class="panel is-active" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects">
+          <div class="grid grid--projects" id="projects" hidden></div>
+
+          <div class="empty-state glass" id="projects-empty">
+            <div class="empty-state__icon" aria-hidden="true">
+              <span class="material-symbols-outlined">...</span>
+            </div>
+            <h3 class="empty-state__title">Portfolio Under Compilation</h3>
+            <p class="empty-state__text">
+              At present, no project entries have been published to this portfolio.
+              The body of work is currently undergoing review and preparation for public
+              dissemination. Selected case studies will be made available herein upon
+              completion of this process.
+            </p>
+            <p class="empty-state__text empty-state__text--muted">
+              Kindly revisit at a later date, or use the contact form to request
+              a preview of ongoing work.
+            </p>
+          </div>
+        </div>
+
+        <!-- RESUME -->
+        <div class="panel" id="panel-resume" role="tabpanel" aria-labelledby="tab-resume" hidden>
+          <div class="resume">
+            <div class="resume__col">
+              <h3 class="resume__heading">
+                <span class="material-symbols-outlined" aria-hidden="true">work_history</span>
+                Experience
+              </h3>
+              <ol class="timeline">
+                <li class="timeline__item">
+                  <h4>Software Engineer · <span>remote</span></h4>
+                  <p class="timeline__date">2018 — Present</p>
+                  <p>Led the development of a customer management system, improving efficiency and streamlining processes.</p>
+                </li>
+                <li class="timeline__item">
+                  <h4>Software Developer Intern · <span>remote</span></h4>
+                  <p class="timeline__date">2016 — 2017</p>
+                  <p>Assisted in the development and testing of a mobile application for internal use.</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="resume__col">
+              <h3 class="resume__heading">
+                <span class="material-symbols-outlined" aria-hidden="true">school</span>
+                Education
+              </h3>
+              <ol class="timeline">
+                <li class="timeline__item">
+                  <h4>Certification in Web Development with React.js</h4>
+                  <p class="timeline__date">2025 — 2026 ·</p>
+                  <p>Relevant coursework: Data Structures, Algorithms, Database Management.</p>
+                </li>
+                <li class="timeline__item">
+                  <h4>Curently studing c.s · <span>Jami University</span></h4>
+                  <p class="timeline__date">2020— 2021</p>
+                </li>
+                <li class="timeline__item">
+                  <h4>English lunguage· <span>muslim English language Instetute</span></h4>
+                  <p class="timeline__date">2024— 2025</p>
+                </li>
+                <li class="timeline__item">
+                  <h4>translation and explaination of holy qura'n to persian · <span>tawheed training center</span></h4>
+                  <p class="timeline__date">2014— 2020</p>
+                </li>
+                <li class="timeline__item">
+                  <h4>ICDL · <span>Atayee learning center</span></h4>
+                  <p class="timeline__date">2020— 2021</p>
+                </li>
+              </ol>
+            </div>
+
+            <div class="resume__col resume__col--full">
+              <h3 class="resume__heading">
+                <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+                Skills &amp; Technologies
+              </h3>
+              <ul class="skills">
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">React.js</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">GitHub</li>
+                <li class="chip">MongoDB</li>
+                <li class="chip">VS Code</li>
+                <li class="chip">java</li>
+                <li class="chip">excel</li>
+                <li class="chip">access</li>
+                <li class="chip">word</li>
+                <li class="chip">power point</li>
+                <li class="chip">internet</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" hidden>
+          <div class="contact">
+            <div class="contact__info">
+              <h3 class="contact__title">Let's work together.</h3>
+              <p class="contact__sub">Have a project or a role in mind? Drop a message — I reply within 24 hours.</p>
+
+              <ul class="info-list">
+                <li>
+                  <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+                  <div>
+                    <strong>Mail us</strong>
+                    <a href="mailto:sayedfozailhashemi">Sayed Fozail Hashemi</a>
+                    <a href="mailto:khalid@service.com">sayedfozailhashemi@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined" aria-hidden="true">call</span>
+                  <div>
+                    <strong>Contact us</strong>
+                    <a href="tel:+93792167191">+93 792 167 191</a>
+                    <a href="tel:+93798916941">+93 798 916 941</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
+                  <div>
+                    <strong>Address</strong>
+                    <span>Herat, Herat, Afghanistan</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <form class="contact__form glass" id="contact-form" novalidate>
+              <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div class="field">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" />
+              </div>
+              <div class="field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block">
+                <span>Send message</span>
+                <span class="material-symbols-outlined" aria-hidden="true">send</span>
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Sayed Fozail. All rights reserved.</p>
+      <ul class="socials" aria-label="Social">
+        <li><a href="#" aria-label="GitHub"><span class="material-symbols-outlined">code</span></a></li>
+        <li><a href="#" aria-label="Twitter"><span class="material-symbols-outlined">flutter_dash</span></a></li>
+        <li><a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
